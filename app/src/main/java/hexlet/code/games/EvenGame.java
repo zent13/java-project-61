@@ -8,6 +8,7 @@ public class EvenGame {
         Scanner scanner = new Scanner(System.in);
         int score = 0;
         boolean mistakeFlag = false;
+        int maxInterval = 100;
 
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
@@ -16,8 +17,7 @@ public class EvenGame {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         while (score < 3) {
-            Random objRandom = new Random();
-            int random = objRandom.nextInt(0, 1000);
+            int random = getRandomInt(maxInterval);
 
             System.out.print("Question: ");
             System.out.println(random);
@@ -47,5 +47,10 @@ public class EvenGame {
             System.out.println("Let's try again, " + name + "!");
         }
         scanner.close();
+    }
+
+    public static int getRandomInt(int maxInterval) {
+        Random random = new Random();
+        return random.nextInt(1, maxInterval);
     }
 }
