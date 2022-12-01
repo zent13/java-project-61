@@ -7,3 +7,6 @@ https://asciinema.org/a/cYZpQgXe8InZHDuCGWP7MkfZJ
 
 Record "Игры разума. Урок 6 (Калькулятор)"
 https://asciinema.org/a/adeEUzLNSf0C7D6yABjvzthS4
+
+Record "Игры разума. Урок 7 (НОД)"
+https://asciinema.org/a/iTTzlDujAiTK1DKKA2RJlSXjX
