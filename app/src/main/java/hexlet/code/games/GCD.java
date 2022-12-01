@@ -1,11 +1,9 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
 import java.util.Scanner;
-import java.util.Random;
 
-public class EvenGame {
+public class GCD {
     public static void game() {
         Scanner scanner = new Scanner(System.in);
         int score = 0;
@@ -16,29 +14,24 @@ public class EvenGame {
         System.out.print("May I have your name? ");
         String name = scanner.next();
         System.out.println("Hello, " + name + "!");
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        System.out.println("Find the greatest common divisor of given numbers.");
 
         while (score < 3) {
-            int random = Engine.getRandomInt(maxInterval);
+            int random1 = Engine.getRandomInt(maxInterval);
+            int random2 = Engine.getRandomInt(maxInterval);
+            int rightAnswer = getRightAnswer(random1, random2);
 
             System.out.print("Question: ");
-            System.out.println(random);
-            System.out.print("Your answer (yes/no): ");
+            System.out.println(random1 + " " + random2);
+            System.out.print("Your answer: ");
             String answer = scanner.next();
 
-            if (random % 2 == 0 && answer.equals("yes")) {
+            if (Integer.parseInt(answer) == rightAnswer) {
                 score++;
                 System.out.println("Correct!");
-            } else if (random % 2 == 0) {
-                mistakeFlag = true;
-                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was 'yes'.");
-                break;
-            } else if (random % 2 != 0 && answer.equals("no")) {
-                System.out.println("Correct!");
-                score++;
             } else {
                 mistakeFlag = true;
-                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was 'no'.");
+                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was " + rightAnswer + ".");
                 break;
             }
         }
@@ -50,4 +43,16 @@ public class EvenGame {
         }
         scanner.close();
     }
+
+    private static int getRightAnswer (int random1, int random2) {
+        while(random1!=random2)
+        {
+            if(random1>random2)
+                random1=random1-random2;
+            else
+                random2=random2-random1;
+        }
+        return random2;
+    }
+
 }

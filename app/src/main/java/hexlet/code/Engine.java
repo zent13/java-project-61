@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import java.util.Random;
 import java.util.Scanner;
 import hexlet.code.games.*;
 
@@ -11,6 +12,7 @@ public class Engine {
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
+        System.out.println("4 - GCD");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
@@ -24,10 +26,18 @@ public class Engine {
             EvenGame.game();
         } else if (gameNum == 3) {
             CalcGame.game();
-        } else {
+        } else if (gameNum == 4) {
+            GCD.game();
+        }
+        else {
             System.out.print("Sorry, i don't know this number, bb!");
         }
 
         scannerGame.close();
+    }
+
+    public static int getRandomInt (int maxInterval) {
+        Random random = new Random();
+        return random.nextInt(1, maxInterval);
     }
 }

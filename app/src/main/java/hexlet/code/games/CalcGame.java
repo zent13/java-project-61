@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -18,8 +20,8 @@ public class CalcGame {
 
         while (score < 3) {
             String mathSign = getMathSign(score);
-            int random1 = getRandomInt(maxInterval);
-            int random2 = getRandomInt(maxInterval);
+            int random1 = Engine.getRandomInt(maxInterval);
+            int random2 = Engine.getRandomInt(maxInterval);
             int rightAnswer = getRightAnswer(score, random1, random2);
 
             System.out.print("Question: ");
@@ -53,10 +55,6 @@ public class CalcGame {
         } else {
             return "*";
         }
-    }
-    private static int getRandomInt (int maxInterval) {
-        Random random = new Random();
-        return random.nextInt(1, maxInterval);
     }
     private static int getRightAnswer (int score, int random1, int random2) {
         if (score == 0) {
