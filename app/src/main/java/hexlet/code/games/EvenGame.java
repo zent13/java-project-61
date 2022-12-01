@@ -1,4 +1,4 @@
-package hexlet.code;
+package hexlet.code.games;
 
 import java.util.Scanner;
 import java.util.Random;
@@ -41,7 +41,7 @@ public class EvenGame {
             }
         }
 
-        if (mistakeFlag == false) {
+        if (!mistakeFlag) {
             System.out.println("Congratulations, " + name + "!");
         } else {
             System.out.println("Let's try again, " + name + "!");
