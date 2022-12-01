@@ -10,3 +10,6 @@ https://asciinema.org/a/adeEUzLNSf0C7D6yABjvzthS4
 
 Record "Игры разума. Урок 7 (НОД)"
 https://asciinema.org/a/iTTzlDujAiTK1DKKA2RJlSXjX
+
+Record "Игры разума. Урок 8 (Арифметическая прогрессия)"
+https://asciinema.org/a/OOLU3K66lwE5hskaOXyAyIxww

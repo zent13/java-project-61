@@ -13,6 +13,7 @@ public class Engine {
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
+        System.out.println("5 - Progression");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
@@ -28,12 +29,15 @@ public class Engine {
             CalcGame.game();
         } else if (gameNum == 4) {
             GCD.game();
+        } else if (gameNum == 5) {
+            ProgressionGame.game();
         }
         else {
             System.out.print("Sorry, i don't know this number, bb!");
         }
 
         scannerGame.close();
+
     }
 
     public static int getRandomInt (int maxInterval) {
