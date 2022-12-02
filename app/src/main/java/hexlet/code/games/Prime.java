@@ -32,7 +32,8 @@ public class Prime {
                 System.out.println("Correct!");
             } else {
                 mistakeFlag = true;
-                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was " + "'" + rightAnswer + "' .");
+                System.out.print("'" + answer + "'" + " is wrong answer ;(. ");
+                System.out.println("Correct answer was " + "'" + rightAnswer + "'.");
                 break;
             }
         }
@@ -45,7 +46,7 @@ public class Prime {
         scanner.close();
     }
 
-    private static String getRightAnswer (int random) {
+    private static String getRightAnswer(int random) {
         boolean isPrime = true;
         for (int i = 2; i < random; i++) {
             if (random == 1 || random % i == 0) {

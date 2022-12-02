@@ -59,7 +59,7 @@ public class ProgressionGame {
         scanner.close();
     }
 
-    private static int getRightAnswer (int startNumber, int increment, int skippedNumber) {
+    private static int getRightAnswer(int startNumber, int increment, int skippedNumber) {
         int answer = startNumber;
         for (int i = 0; i < skippedNumber; i++) {
             answer = answer + increment;

@@ -45,14 +45,15 @@ public class GCD {
         scanner.close();
     }
 
-    private static int getRightAnswer (int random1, int random2) {
-        while(random1!=random2)
-        {
-            if(random1>random2)
-                random1=random1-random2;
-            else
-                random2=random2-random1;
+    private static int getRightAnswer(int random1, int random2) {
+        while (random1 != random2) {
+            if (random1 > random2) {
+                random1 = random1 - random2;
+            } else {
+                random2 = random2 - random1;
+            }
         }
+
         return random2;
     }
 

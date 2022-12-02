@@ -2,7 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class CalcGame {
@@ -57,7 +56,7 @@ public class CalcGame {
             return "*";
         }
     }
-    private static int getRightAnswer (int score, int random1, int random2) {
+    private static int getRightAnswer(int score, int random1, int random2) {
         if (score == 0) {
             return random1 + random2;
         } else if (score == 1) {

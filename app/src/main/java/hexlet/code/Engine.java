@@ -2,7 +2,12 @@ package hexlet.code;
 
 import java.util.Random;
 import java.util.Scanner;
-import hexlet.code.games.*;
+import hexlet.code.games.EvenGame;
+import hexlet.code.games.CalcGame;
+import hexlet.code.games.GCD;
+import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.Prime;
+
 
 public class Engine {
     public static void startGame() {
@@ -18,7 +23,7 @@ public class Engine {
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
-        int gameNum = Integer.parseInt (scannerGame.next());
+        int gameNum = Integer.parseInt(scannerGame.next());
 
         if (gameNum == 0) {
             System.out.print("BB!");
@@ -34,16 +39,14 @@ public class Engine {
             ProgressionGame.game();
         } else if (gameNum == 6) {
             Prime.game();
-        }
-        else {
+        } else {
             System.out.print("Sorry, i don't know this number, bb!");
         }
 
         scannerGame.close();
-
     }
 
-    public static int getRandomInt (int maxInterval) {
+    public static int getRandomInt(int maxInterval) {
         Random random = new Random();
         return random.nextInt(1, maxInterval);
     }
