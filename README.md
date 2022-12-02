@@ -13,3 +13,6 @@ https://asciinema.org/a/iTTzlDujAiTK1DKKA2RJlSXjX
 
 Record "Игры разума. Урок 8 (Арифметическая прогрессия)"
 https://asciinema.org/a/OOLU3K66lwE5hskaOXyAyIxww
+
+Record "Игры разума. Урок 9 (Простое ли число?)"
+https://asciinema.org/a/W863RJiREdsiMwBHDz6PSeCTk

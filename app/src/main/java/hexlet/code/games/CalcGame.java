@@ -9,6 +9,7 @@ public class CalcGame {
     public static void game() {
         Scanner scanner = new Scanner(System.in);
         int score = 0;
+        int scoreToWin = 3;
         boolean mistakeFlag = false;
         int maxInterval = 10;
 
@@ -18,7 +19,7 @@ public class CalcGame {
         System.out.println("Hello, " + name + "!");
         System.out.println("What is the result of the expression?");
 
-        while (score < 3) {
+        while (score < scoreToWin) {
             String mathSign = getMathSign(score);
             int random1 = Engine.getRandomInt(maxInterval);
             int random2 = Engine.getRandomInt(maxInterval);

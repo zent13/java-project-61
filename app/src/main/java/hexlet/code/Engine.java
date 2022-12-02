@@ -14,6 +14,7 @@ public class Engine {
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
@@ -31,6 +32,8 @@ public class Engine {
             GCD.game();
         } else if (gameNum == 5) {
             ProgressionGame.game();
+        } else if (gameNum == 6) {
+            Prime.game();
         }
         else {
             System.out.print("Sorry, i don't know this number, bb!");

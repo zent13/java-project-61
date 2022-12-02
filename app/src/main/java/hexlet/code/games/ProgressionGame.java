@@ -8,6 +8,7 @@ public class ProgressionGame {
     public static void game() {
         Scanner scanner = new Scanner(System.in);
         int score = 0;
+        int scoreToWin = 3;
         boolean mistakeFlag = false;
         int maxInterval = 10;
 
@@ -17,7 +18,7 @@ public class ProgressionGame {
         System.out.println("Hello, " + name + "!");
         System.out.println("What number is missing in the progression?");
 
-        while (score < 3) {
+        while (score < scoreToWin) {
             int startNumber = Engine.getRandomInt(maxInterval);
             int increment = Engine.getRandomInt(maxInterval);
             int skippedNumber = Engine.getRandomInt(maxInterval);

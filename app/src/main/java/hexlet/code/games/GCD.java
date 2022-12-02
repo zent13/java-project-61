@@ -7,6 +7,7 @@ public class GCD {
     public static void game() {
         Scanner scanner = new Scanner(System.in);
         int score = 0;
+        int scoreToWin = 3;
         boolean mistakeFlag = false;
         int maxInterval = 100;
 
@@ -16,7 +17,7 @@ public class GCD {
         System.out.println("Hello, " + name + "!");
         System.out.println("Find the greatest common divisor of given numbers.");
 
-        while (score < 3) {
+        while (score < scoreToWin) {
             int random1 = Engine.getRandomInt(maxInterval);
             int random2 = Engine.getRandomInt(maxInterval);
             int rightAnswer = getRightAnswer(random1, random2);
