@@ -48,10 +48,15 @@ public class Prime {
 
     private static String getRightAnswer(int random) {
         boolean isPrime = true;
-        for (int i = 2; i < random; i++) {
-            if (random == 1 || random % i == 0) {
-                isPrime = false;
-                break;
+
+        if (random == 1) {
+            isPrime = false;
+        } else {
+            for (int i = 2; i < random; i++) {
+                if (random % i == 0) {
+                    isPrime = false;
+                    break;
+                }
             }
         }
 
