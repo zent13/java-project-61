@@ -43,11 +43,7 @@ public class EvenGame {
             }
         }
 
-        if (!mistakeFlag) {
-            System.out.println("Congratulations, " + name + "!");
-        } else {
-            System.out.println("Let's try again, " + name + "!");
-        }
+        Engine.printAnswer(mistakeFlag, name);
         scanner.close();
     }
 }
