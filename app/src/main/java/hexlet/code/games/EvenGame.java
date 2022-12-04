@@ -15,30 +15,30 @@ public class EvenGame {
 
         while (score < scoreToWin) {
             int random = Engine.getRandomInt(maxInterval);
+            String rightAnswer = getRightAnswer(random);
 
             System.out.print("Question: ");
             System.out.println(random);
             System.out.print("Your answer (yes/no): ");
             String answer = scanner.next();
 
-            if (random % 2 == 0 && answer.equalsIgnoreCase("yes")) {
+            if (answer.equalsIgnoreCase(rightAnswer)) {
                 score++;
                 System.out.println("Correct!");
-            } else if (random % 2 == 0) {
-                mistakeFlag = true;
-                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was 'yes'.");
-                break;
-            } else if (random % 2 != 0 && answer.equalsIgnoreCase("no")) {
-                System.out.println("Correct!");
-                score++;
             } else {
                 mistakeFlag = true;
-                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was 'no'.");
+                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was " + rightAnswer + ".");
                 break;
             }
         }
 
         Engine.printAnswer(mistakeFlag, name);
         scanner.close();
+    }
+
+    private static String getRightAnswer(int random) {
+        if (random % 2 == 0) {
+            return "yes";
+        } else return "no";
     }
 }
