@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class ProgressionGame {
     public static void game(int scoreToWin, int maxInterval, boolean mistakeFlag, int score) {
         Scanner scanner = new Scanner(System.in);
-        int lengthOfProgression = 10; //progression length
+        final int lengthOfProgression = 10; //progression length
 
         System.out.print("May I have your name? ");
         String name = scanner.next();
