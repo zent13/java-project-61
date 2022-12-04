@@ -5,12 +5,9 @@ import hexlet.code.Engine;
 import java.util.Scanner;
 
 public class Prime {
-    public static void game() {
+    public static void game(int scoreToWin, int maxInterval, boolean mistakeFlag) {
         Scanner scanner = new Scanner(System.in);
         int score = 0;
-        int scoreToWin = 3;
-        boolean mistakeFlag = false;
-        int maxInterval = 100;
 
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");

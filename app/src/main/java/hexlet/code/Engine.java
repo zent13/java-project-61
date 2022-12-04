@@ -19,6 +19,9 @@ public class Engine {
         final int gcdGame = 4; //gcdGame
         final int progressionGame = 5; //progressionGame
         final int primeGame = 6; //primeGame
+        final int scoreToWin = 3; //player win, when player rich this number of score
+        boolean mistakeFlag = false;
+        final int maxInterval = 100; //level to genereating random number
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
@@ -34,33 +37,13 @@ public class Engine {
 
         switch (gameNum) {
             case greatGame -> Cli.whatYourName();
-            case evenGame -> EvenGame.game();
-            case calcGame -> CalcGame.game();
-            case gcdGame -> GCD.game();
-            case progressionGame -> ProgressionGame.game();
-            case primeGame -> Prime.game();
+            case evenGame -> EvenGame.game(scoreToWin, maxInterval, mistakeFlag);
+            case calcGame -> CalcGame.game(scoreToWin, maxInterval, mistakeFlag);
+            case gcdGame -> GCD.game(scoreToWin, maxInterval, mistakeFlag);
+            case progressionGame -> ProgressionGame.game(scoreToWin, maxInterval, mistakeFlag);
+            case primeGame -> Prime.game(scoreToWin, maxInterval, mistakeFlag);
             default -> System.out.print("BB!");
         }
-/*
-        if (gameNum == 0) {
-            System.out.print("BB!");
-        } else if (gameNum == 1) {
-            Cli.whatYourName();
-        } else if (gameNum == 2) {
-            EvenGame.game();
-        } else if (gameNum == 3) {
-            CalcGame.game();
-        } else if (gameNum == 4) {
-            GCD.game();
-        } else if (gameNum == 5) {
-            ProgressionGame.game();
-        } else if (gameNum == 6) {
-            Prime.game();
-        } else {
-            System.out.print("Sorry, i don't know this number, bb!");
-        }
-
- */
 
         scannerGame.close();
     }
