@@ -4,11 +4,9 @@ import hexlet.code.Engine;
 import java.util.Scanner;
 
 public class GCD {
-    public static void game(int scoreToWin, int maxInterval, boolean mistakeFlag) {
+    public static void game(int scoreToWin, int maxInterval, boolean mistakeFlag, int score) {
         Scanner scanner = new Scanner(System.in);
-        int score = 0;
 
-        System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         String name = scanner.next();
         System.out.println("Hello, " + name + "!");

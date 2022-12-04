@@ -5,11 +5,10 @@ import hexlet.code.Engine;
 import java.util.Scanner;
 
 public class ProgressionGame {
-    public static void game(int scoreToWin, int maxInterval, boolean mistakeFlag) {
+    public static void game(int scoreToWin, int maxInterval, boolean mistakeFlag, int score) {
         Scanner scanner = new Scanner(System.in);
-        int score = 0;
+        int lengthOfProgression = 10; //progression length
 
-        System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         String name = scanner.next();
         System.out.println("Hello, " + name + "!");
@@ -18,19 +17,19 @@ public class ProgressionGame {
         while (score < scoreToWin) {
             int startNumber = Engine.getRandomInt(maxInterval);
             int increment = Engine.getRandomInt(maxInterval);
-            int skippedNumber = Engine.getRandomInt(maxInterval);
+            int skippedNumber = Engine.getRandomInt(lengthOfProgression);
             int rightAnswer = getRightAnswer(startNumber, increment, skippedNumber);
 
             System.out.print("Question: ");
 
-            int currSequenceLenght = startNumber;
-            for (int i = 0; i < 10; i++) {
+            int currSequenceLength = startNumber;
+            for (int i = 0; i < lengthOfProgression; i++) {
                 if (skippedNumber != i) {
-                    System.out.print(currSequenceLenght + " ");
-                    currSequenceLenght = currSequenceLenght + increment;
+                    System.out.print(currSequenceLength + " ");
+                    currSequenceLength = currSequenceLength + increment;
                 } else {
                     System.out.print(".." + " ");
-                    currSequenceLenght = currSequenceLenght + increment;
+                    currSequenceLength = currSequenceLength + increment;
                 }
             }
 

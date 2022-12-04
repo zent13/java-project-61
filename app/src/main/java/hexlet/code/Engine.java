@@ -22,6 +22,7 @@ public class Engine {
         final int scoreToWin = 3; //player win, when player rich this number of score
         boolean mistakeFlag = false;
         final int maxInterval = 100; //level to genereating random number
+        int score = 0; //start amount of score
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
@@ -35,13 +36,15 @@ public class Engine {
 
         int gameNum = Integer.parseInt(scannerGame.next());
 
+        System.out.println("Welcome to the Brain Games!");
+
         switch (gameNum) {
             case greatGame -> Cli.whatYourName();
-            case evenGame -> EvenGame.game(scoreToWin, maxInterval, mistakeFlag);
-            case calcGame -> CalcGame.game(scoreToWin, maxInterval, mistakeFlag);
-            case gcdGame -> GCD.game(scoreToWin, maxInterval, mistakeFlag);
-            case progressionGame -> ProgressionGame.game(scoreToWin, maxInterval, mistakeFlag);
-            case primeGame -> Prime.game(scoreToWin, maxInterval, mistakeFlag);
+            case evenGame -> EvenGame.game(scoreToWin, maxInterval, mistakeFlag, score);
+            case calcGame -> CalcGame.game(scoreToWin, maxInterval, mistakeFlag, score);
+            case gcdGame -> GCD.game(scoreToWin, maxInterval, mistakeFlag, score);
+            case progressionGame -> ProgressionGame.game(scoreToWin, maxInterval, mistakeFlag, score);
+            case primeGame -> Prime.game(scoreToWin, maxInterval, mistakeFlag, score);
             default -> System.out.print("BB!");
         }
 
