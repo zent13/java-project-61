@@ -27,7 +27,8 @@ public class Prime {
                 System.out.println("Correct!");
             } else {
                 mistakeFlag = true;
-                System.out.print("'" + answer + "'" + " is wrong answer ;(. Correct answer was " + "'" + rightAnswer + "'.");
+                System.out.print("'" + answer + "'" + " is wrong answer ;(. Correct answer was " + "'"
+                        + rightAnswer + "'.");
                 break;
             }
         }

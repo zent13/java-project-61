@@ -39,6 +39,8 @@ public class EvenGame {
     private static String getRightAnswer(int random) {
         if (random % 2 == 0) {
             return "yes";
-        } else return "no";
+        } else {
+            return "no";
+        }
     }
 }
